@@ -1,6 +1,6 @@
 package board
 
-enum class BoardPoint(val rank: String, val file: String) {
+enum class BoardPoint(val file: String, val rank: String) {
     A1("a", "1"), B1("b", "1"), C1("c", "1"), D1("d", "1"),
     E1("e", "1"), F1("f", "1"), G1("g", "1"), H1("h", "1"),
 

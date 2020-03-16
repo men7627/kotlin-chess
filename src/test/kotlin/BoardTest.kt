@@ -1,7 +1,6 @@
-import board.ChessBoard
 import board.BoardPoint
+import board.ChessBoard
 import board.Piece
-import board.PieceType
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -29,5 +28,24 @@ class BoardTest {
         val board = ChessBoard()
         val piece = board.getPiece(BoardPoint.A3)
         assertThat(piece).isNull()
+    }
+
+    @Test
+    @DisplayName("체스판 콘솔 출력 - 초기화")
+    internal fun print() {
+        val board = ChessBoard()
+        assertThat(board.toString()).isEqualTo(
+            """
+            RNBQKBNR
+            PPPPPPPP
+            ........
+            ........
+            ........
+            ........
+            pppppppp
+            rnbqkbnr
+            
+            """.trimIndent()
+        )
     }
 }

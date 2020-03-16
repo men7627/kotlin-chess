@@ -28,4 +28,17 @@ class ChessBoard() {
     fun getPiece(boardPoint: BoardPoint): Piece? {
         return points[boardPoint]
     }
+
+    override fun toString(): String {
+        val sb = StringBuilder()
+        for (rank in '8' downTo '1') {
+            points
+                .filter { rank.toString() == it.key.rank }
+                .entries
+                .sortedBy { it.key.file }
+                .forEach { sb.append((it.value ?: EMPTY).printOut) }
+            sb.append("\n")
+        }
+        return sb.toString()
+    }
 }
