@@ -1,0 +1,12 @@
+package board
+
+import board.PieceColor.BLACK
+import board.PieceColor.WHITE
+import board.PieceType.*
+
+enum class Piece(val pieceType: PieceType, val pieceColor: PieceColor) {
+    WHITE_ROOK(ROOK, WHITE), WHITE_KNIGHT(KNIGHT, WHITE), WHITE_BISHOP(BISHOP, WHITE), WHITE_QUEEN(QUEEN, WHITE),
+    WHITE_KING(KING, WHITE), WHITE_PAWN(PAWN, WHITE),
+    BLACK_ROOK(ROOK, BLACK), BLACK_KNIGHT(KNIGHT, BLACK), BLACK_BISHOP(BISHOP, BLACK), BLACK_QUEEN(QUEEN, BLACK),
+    BLACK_KING(KING, BLACK), BLACK_PAWN(PAWN, BLACK),
+}
